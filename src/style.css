@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Light-grey);
+}
+
+.card-container {
+  width: 600px;
+  border-radius: 1rem 1rem 10rem 1rem;
+  background-color: var(--White);
+  padding: 2rem;
+  max-width: 90vw;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inputs-container {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.input-label-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.input-label-container label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.2rem;
+}
+
+.input-label-container input {
+  width: 130px;
+  padding: 0.75rem 1rem 0.75rem 1.25rem;
+  font-size: 1.5rem;
+  color: var(--Off-black);
+  border-radius: 0.5rem;
+  outline: none;
+  letter-spacing: 0.1rem;
+}
+
+.input-label-container input:focus {
+  border: 1px solid var(--Purple);
+}
+
+.error {
+  color: var(--Light-red);
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 0.25rem;
+  letter-spacing: 0.1rem;
+  font-size: 0.75rem;
+}
+
+.error.generic {
+  margin-top: 0.5rem;
+}
+
+.divider-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.divider {
+  height: 2px;
+  background-color: var(--Off-white);
+  width: 86%;
+}
+
+.btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--Purple);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: var(--Off-black);
+}
+
+.output-container h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.output-container .highlighted {
+  color: var(--Purple);
+  letter-spacing: 0.25rem;
+}
+
+@media only screen and (max-width: 620px) {
+  .divider-container {
+    display: block;
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .divider {
+    width: 100%;
+  }
+
+  .btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .inputs-container {
+    gap: 0.85rem;
+  }
+
+  .input-label-container input {
+    font-size: 1rem;
+  }
+
+  .output-container h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .inputs-container {
+    flex-direction: column;
+  }
+
+  .input-label-container {
+    width: 100%;
+  }
+
+  .input-label-container input {
+    width: 100%;
+  }
+
+  .card-container {
+    border-radius: 1rem 1rem 5rem 1rem;
+  }
+}
